@@ -13,6 +13,9 @@ div, lablel, legend, h1, main, header, table, thead, tr, th, td, tbody, ul, foot
 
 ## Observações.
 Foi criado um arquivo **.gitignore** que não contem nenhum registro pois não há arquivos para ignorar.
+Foi Feita a inclusão do **Vlibras** para se utilizar de **acessibilidade**
+
+
 
 ## Endereço do Repositório.
 
