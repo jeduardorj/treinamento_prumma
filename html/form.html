@@ -1,94 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- CDN do Font Awsone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN do Font Awsone -->
+    <link rel="stylesheet" href="../style/form.css">
+    <title>Formulario</title>
 </head>
-<body>
-    <nav>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="listaPrecos.html">Lista de Preços</a></li>
-        <li><a href="#">Formulario</a></li>  
-    </nav>
-    <header>
-        <h1>Formulario de Inscrição</h1>
-    </header>
 
+<body class="container">
+
+    <header>
+        <h1 id="titulo">Cadastro de DEVs</h1>
+        <p id="subtitulo">Complete informações</p>
+        <br>
+    </header>
+    <!-------------------------------------------- API de Libras----------------------- -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
-
-      <main>
-        <fieldset>
-            <legend>Formulario de incrição</legend>
-            <form action="">
-                <fieldset>
-                    <div>
-                        <label for="nome">Primeiro Nome:</label>
-                        <input id="nome" type="text" placeholder="Digite seu nome">
-                    </div>
-                    <br>
-
-                    <div>
-                        <label for="sobreNome">Sobrenome:</label>
-                        <input id="sobreNome" type="text" placeholder="Digite seu sobrenome">
-                    </div>
-        
-                    <br>
-                    <div>
-                        <label for="email">Endereço de Email:</label>
-                        <input  type="email" id="email" placeholder="Digite seu email">
-                    </div>
-                    <br>
-                    <div>
-                        <label for="celular">Numero do Celular:</label>
-                        <input  type="tel" id="ecelular" placeholder="(xx)xxxxx-xxxx">
-                    </div>
-                </fieldset>
-                <br>
-    
-                <div>
-                    <fieldset>
-                        <legend>Sexo</legend>
-                        <div>
-                            <label for="maculino">Masculino</label>
-                            <input type="radio" name="sexo" id="maculino">
-                        </div>
-                        <div>
-                            <label for="feminino">Feminino</label>
-                            <input type="radio" name="sexo" id="feminino">
-                        </div>
-                    </fieldset>
-    
-                </div>
-                
-                <div>
-                    <label for="textArea">Fale Sobre Você:</label>
-                    <br>
-                    <textarea name="textArea" id="textArea" cols="30" rows="5"></textarea>
-                </div>
-                <br>
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </fieldset>
-      </main>
-      <br>
-      <br>
-      <br>
-      <div>
-        <footer>
-            Feito Por <strong><a href="https://github.com/jeduardorj" target="_blank">José&nbsp;Eduardo</a></strong> para o treinamento da Prumma Tecnologies <strong>&copy;</strong>
-        </footer>
     </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-------------------------------------------- API de Libras----------------------- -->
+    <main>
+        <form>
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input id="nome" type="text" placeholder="Digite seu nome">
+                </div>
+
+                <div class="campo">
+                    <label for="sobreNome">Sobrenome:</label>
+                    <input id="sobreNome" type="text" placeholder="Digite seu sobrenome">
+                </div>
+            </fieldset>
+
+            <div class="campo">
+                <label for="email">Endereço de Email:</label>
+                <input type="email" id="email" placeholder="Digite seu email">
+            </div>
+
+
+            <div class="campo">
+                <label for="">De qual lado da aplicação você desenvolve?</label>
+                <label for="">
+                    <input type="radio" name="devweb" id="frontEnd" checked>Front-End
+                </label>
+                <label for="">
+                    <input type="radio" name="devweb" id="backEnd">Back-End
+                </label>
+                <label for="">
+                    <input type="radio" name="devweb" id="fullstack">Full-Stack
+                </label>
+            </div>
+
+            <div class="campo">
+                <label for="">Senioridade</label>
+                <select name="" id="senioridade">
+                    <option value="" selected disabled>Selecione</option>
+                    <option value="">Junior</option>
+                    <option value="">Pleno</option>
+                    <option value="">Sênior</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <div id="check">
+                    <label for="">Selecione as tecnologias que utiliza</label>
+                    <input type="checkbox" name="tecnologia1" id="tecnologia1" value="HTML">
+                    <label for="tecnologia1">HTML</label>
+                    <input type="checkbox" name="tecnologia2" id="tecnologia2" value="CSS">
+                    <label for="tecnologia2">CSS</label>
+                    <input type="checkbox" name="tecnologia3" id="tecnologia3" value="JAVASCRIPT">
+                    <label for="tecnologia3">JAVASCRIPT</label>
+                    <input type="checkbox" name="tecnologia4" id="tecnologia4" value="PHP">
+                    <label for="tecnologia4">PHP</label>
+                    <input type="checkbox" name="tecnologia5" id="tecnologia5" value="C#">
+                    <label for="tecnologia5">C#</label>
+                    <input type="checkbox" name="tecnologia6" id="tecnologia6" value="PYTHON">
+                    <label for="tecnologia6">PYTHON</label>
+                    <input type="checkbox" name="tecnologia7" id="tecnologia7" value="JAVA">
+                    <label for="tecnologia7">JAVA</label>
+                </div>
+            </fieldset>
+
+            <div class="campo">
+                <br>
+                <label for="textArea">Fale Sobre Você:</label>
+                <textarea name="experiencia" id="experiencia" rows="10" style="width: 26em;"></textarea>
+            </div>
+            <div>
+                <button class="botao" type="submit">concluido</button>
+            </div>
+
+        </form>
+    </main>
+
+
 </body>
+
 </html>
