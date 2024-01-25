@@ -1,23 +1,23 @@
-/* Reset de estilos para remover margens e paddings padrão do navegador */
-body, h1, h2, p, ul, li {
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Evita problemas de layout causados por bordas e padding */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-image: url('caminho/para/sua/imagem.jpg'); /* Adicione o caminho da sua imagem aqui */
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o fundo */
-    background-repeat: no-repeat;
-    color: #333;
+    font-family: sans-serif;
+    background-color: #ccbbff;
+    color: #59429D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 header {
-    
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #59429D;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
 }
@@ -26,29 +26,30 @@ header h1 {
     margin-bottom: 10px;
 }
 
-header ul {
+ul {
     list-style: none;
-    margin-top: 10px; /* Adiciona espaço entre o título e a lista de links */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-header ul li {
-    display: inline-block;
+ul li {
     margin-right: 20px;
 }
 
-header a {
+ul a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
+    background-color: #ffffff;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente branco para destacar o conteúdo */
+    margin: 20px 0;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 section {
@@ -57,40 +58,58 @@ section {
 }
 
 footer {
-    text-align: center;
+    width: 100%;
+    background-color: #59429D;
+    color: #ffffff;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
+    text-align: center;
+}
+
+/* Estilo para o menu sanduíche */
+nav {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    ul {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Estilo para o menu sanduíche quando aberto */
+.menu-icon:checked + nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #59429D;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-icon:checked + nav a {
+    color: #ffffff;
+    padding: 10px;
+    display: block;
     width: 100%;
 }
 
-/* Adicionando estilo ao plugin de libras */
-#VLibras {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 10000;
-}
-
-/* Estilo para o botão de acessibilidade */
-.enabled {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-.active {
-    background-color: #4CAF50;
-    color: #fff;
-}
-
-/* Responsividade */
-@media screen and (max-width: 600px) {
-    header ul li {
-        display: block;
-        margin: 10px 0;
-        text-align: center; /* Centraliza os links em telas menores */
-    }
+.menu-icon:checked + nav a:hover {
+    background-color: #ccbbff;
+    color: #59429D;
 }
