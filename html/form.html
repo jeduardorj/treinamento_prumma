@@ -13,15 +13,9 @@
     <title>Formulario</title>
 </head>
 
-<body class="container">
-
-    <header>
-        <h1 id="titulo">Cadastro de DEVs</h1>
-        <p id="subtitulo">Complete informações</p>
-        <br>
-    </header>
-    <!-------------------------------------------- API de Libras----------------------- -->
-    <div vw class="enabled">
+<body >
+      <!-------------------------------------------- API de Libras----------------------- -->
+      <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
@@ -32,6 +26,20 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
     <!-------------------------------------------- API de Libras----------------------- -->
+
+    <header>
+        <h1 id="titulo">Cadastro de DEVs</h1>
+        <p id="subtitulo">Complete informações</p>
+        <br>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="listaPrecos.html">Lista de Preços</a></li>
+            <li><a href="form.html">Formulario</a></li>         
+        </ul>
+    </nav>
+  
     <main>
         <form>
             <fieldset class="grupo">
@@ -107,7 +115,9 @@
         </form>
     </main>
 
-
+    <!-- <footer>
+        Feito Por <strong><a href="https://github.com/jeduardorj" target="_blank">José&nbsp;Eduardo</a></strong> para o treinamento da Prumma Tecnologies <strong>&copy;</strong>
+    </footer> -->
 </body>
 
 </html>
