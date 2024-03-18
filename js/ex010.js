@@ -6,10 +6,10 @@ function mudarDeCor() {
         return;
     }
 
-    // Remove espaços extras antes e depois da entrada do usuário
+   
     entradaDoUsuario = entradaDoUsuario.trim();
 
-    // Verifica se a entrada do usuário é um código hexadecimal ou um nome de cor em inglês
+    
     let validaHexadecimal = /^#[0-9A-F]{6}$/i.test(entradaDoUsuario);
     let corEmIngles = /^(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow)$/i.test(entradaDoUsuario);
 
@@ -20,5 +20,5 @@ function mudarDeCor() {
     }
 }
 
-// Chama a função ao carregar a página (opcional)
+
 window.onload = mudarDeCor;

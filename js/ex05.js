@@ -22,7 +22,7 @@ while (true) {
 
 let total = produtos.reduce((acc, produto) => acc + produto.subtotal, 0);
 
-console.log("Lista de Produtos:");
+
 
 produtos.forEach(produto => {
     alert(`Produto: ${produto.nome}, Quantidade: ${produto.quantidade}, Preço Unitário: R$ ${produto.precoUnitario.toFixed(2)}, Subtotal: R$ ${produto.subtotal.toFixed(2)}`);

@@ -23,6 +23,6 @@ const login = () => {
     }
 };
 
-// window.onload = login;
+
 
 const resultado = login(usuarios)
